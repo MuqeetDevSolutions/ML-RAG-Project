@@ -1,0 +1,169 @@
+{
+  "metadata": {
+    "description": "RAG evaluation dataset for 'Short Stories in English for Beginners'",
+    "total": 20,
+    "notes": "match_mode: 'any' means any keyword match is enough (synonyms friendly). Default 'all'."
+  },
+  "items": [
+    {
+      "id": "q01",
+      "category": "character",
+      "question": "Who is Carl?",
+      "expected_answer_keywords": ["watchmaker", "watchmaker in", "makes watches"],
+      "match_mode": "any",
+      "expected_pages": [81]
+    },
+    {
+      "id": "q02",
+      "category": "character",
+      "question": "Who is Susan?",
+      "expected_answer_keywords": ["security guard", "security", "guard"],
+      "match_mode": "any",
+      "expected_pages": [81]
+    },
+    {
+      "id": "q03",
+      "category": "plot",
+      "question": "What happened to Daniel on the bus to La Paella Loca?",
+      "expected_answer_keywords": ["valencia", "asleep", "fell asleep", "wrong bus"],
+      "match_mode": "any",
+      "expected_pages": [25, 26, 27]
+    },
+    {
+      "id": "q04",
+      "category": "character",
+      "question": "Who is Armando?",
+      "expected_answer_keywords": ["friend", "daniel's friend"],
+      "match_mode": "any",
+      "expected_pages": [24, 33, 36]
+    },
+    {
+      "id": "q05",
+      "category": "plot",
+      "question": "Why is Laura invisible?",
+      "expected_answer_keywords": ["metal ball", "strange object", "light-emitting", "touched"],
+      "match_mode": "any",
+      "expected_pages": [141, 142, 148]
+    },
+    {
+      "id": "q06",
+      "category": "character",
+      "question": "Who is Maha?",
+      "expected_answer_keywords": ["13", "kalkian", "girl"],
+      "match_mode": "any",
+      "expected_pages": [162, 167, 170]
+    },
+    {
+      "id": "q07",
+      "category": "character",
+      "question": "Who is Maha's father?",
+      "expected_answer_keywords": ["emperor", "kalkian emperor"],
+      "match_mode": "any",
+      "expected_pages": [170]
+    },
+    {
+      "id": "q08",
+      "category": "character",
+      "question": "Who is Walter?",
+      "expected_answer_keywords": ["uncle", "scotland", "mission"],
+      "match_mode": "any",
+      "expected_pages": [101, 116]
+    },
+    {
+      "id": "q09",
+      "category": "plot",
+      "question": "What is Walter's mission?",
+      "expected_answer_keywords": ["number", "chest", "find", "three"],
+      "match_mode": "any",
+      "expected_pages": [101, 102, 104]
+    },
+    {
+      "id": "q10",
+      "category": "character",
+      "question": "Who are David, Lucy, and Alan?",
+      "expected_answer_keywords": ["siblings", "sister", "brother", "adopted"],
+      "match_mode": "any",
+      "expected_pages": [116]
+    },
+    {
+      "id": "q11",
+      "category": "plot",
+      "question": "What happens to the Vikings in the story?",
+      "expected_answer_keywords": ["died", "land", "north america", "new land", "storm"],
+      "match_mode": "any",
+      "expected_pages": [128, 129, 134, 135]
+    },
+    {
+      "id": "q12",
+      "category": "character",
+      "question": "Who is Chief Eskol?",
+      "expected_answer_keywords": ["chief", "leader", "viking"],
+      "match_mode": "any",
+      "expected_pages": [121, 122]
+    },
+    {
+      "id": "q13",
+      "category": "plot",
+      "question": "Why did Sylvia and George go to the old house?",
+      "expected_answer_keywords": ["noise", "investigate", "hear", "sound", "creature"],
+      "match_mode": "any",
+      "expected_pages": [44, 45]
+    },
+    {
+      "id": "q14",
+      "category": "plot",
+      "question": "What was the creature in the house actually?",
+      "expected_answer_keywords": ["father", "sylvia's father", "dad", "birthday"],
+      "match_mode": "any",
+      "expected_pages": [56, 57, 59]
+    },
+    {
+      "id": "q15",
+      "category": "character",
+      "question": "Who is Eric el Kraken?",
+      "expected_answer_keywords": ["pirate", "captain"],
+      "match_mode": "any",
+      "expected_pages": [83, 84, 87]
+    },
+    {
+      "id": "q16",
+      "category": "plot",
+      "question": "How does the watch work?",
+      "expected_answer_keywords": ["time", "travel", "time travel"],
+      "match_mode": "any",
+      "expected_pages": [82, 83, 88]
+    },
+    {
+      "id": "q17",
+      "category": "plot",
+      "question": "What is the secret of Arthuren's kingdom?",
+      "expected_answer_keywords": ["magic water", "no more", "ran out", "lost"],
+      "match_mode": "any",
+      "expected_pages": [77, 79]
+    },
+    {
+      "id": "q18",
+      "category": "character",
+      "question": "Who is Lars?",
+      "expected_answer_keywords": ["knight", "fighter", "fights"],
+      "match_mode": "any",
+      "expected_pages": [62, 63]
+    },
+    {
+      "id": "q19",
+      "category": "out_of_scope",
+      "question": "What is the capital of France?",
+      "expected_answer_keywords": [],
+      "expected_pages": [],
+      "should_be_not_found": true
+    },
+    {
+      "id": "q20",
+      "category": "out_of_scope",
+      "question": "Who won the 2022 FIFA World Cup?",
+      "expected_answer_keywords": [],
+      "expected_pages": [],
+      "should_be_not_found": true
+    }
+  ]
+}

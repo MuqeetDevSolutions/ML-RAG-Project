@@ -1,29 +1,93 @@
-# Virtual environment
-venv/
-.venv/
-
-# Python cache
+# ============================================================
+# Python
+# ============================================================
 __pycache__/
 *.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
 *.egg-info/
-.pytest_cache/
+.eggs/
 
-# Environment / secrets — KABHI git me na jayein
+# ============================================================
+# Virtual environments
+# ============================================================
+venv/
+.venv/
+env/
+ENV/
+
+# ============================================================
+# Environment / secrets — KABHI commit nahi
+# ============================================================
 .env
 *.env
 !.env.example
+.env.local
+.env.*.local
 
-# Data (user uploads, vector stores)
+# ============================================================
+# Data (user uploads + vector stores + DB)
+# ============================================================
 data/uploads/*
 !data/uploads/.gitkeep
 data/vectorstore/*
 !data/vectorstore/.gitkeep
 data/app.db
+data/app.db-journal
+data/app.db-wal
+data/app.db-shm
 
-# IDE
+# ============================================================
+# Logs
+# ============================================================
+logs/
+*.log
+*.log.*
+
+# ============================================================
+# Evaluation reports (test artifacts)
+# ============================================================
+tests/eval_reports/
+
+# ============================================================
+# IDE / Editors
+# ============================================================
 .vscode/
+!.vscode/settings.json.example
 .idea/
+*.swp
+*.swo
+*~
 
+# ============================================================
 # OS
+# ============================================================
 .DS_Store
 Thumbs.db
+desktop.ini
+
+# ============================================================
+# Test artifacts
+# ============================================================
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# ============================================================
+# Model caches (bahut bade hote hain)
+# ============================================================
+.cache/
+huggingface/
+*.safetensors
+*.bin
+
+# ============================================================
+# Deployment artifacts
+# ============================================================
+Dockerfile.bak
+.dockerignore
+render.yaml.bak

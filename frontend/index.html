@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RAG Document QA</title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+    <header class="app-header">
+        <div class="brand">
+            <span class="logo">📚</span>
+            <h1>RAG Document QA</h1>
+        </div>
+        <div class="header-right">
+            <button id="new-chat-btn" class="new-chat-btn" title="Start a new conversation">
+                ＋ New Chat
+            </button>
+            <span id="status-dot" class="status-dot" title="Server status"></span>
+            <span id="status-text" class="status-text">Connecting…</span>
+        </div>
+    </header>
+
+    <div class="layout">
+        <aside class="sidebar">
+            <div class="sidebar-section">
+                <h2>Documents</h2>
+                <div id="doc-stats" class="stats">Loading…</div>
+            </div>
+
+            <div class="sidebar-section">
+                <label for="file-input" class="upload-btn" id="upload-label">
+                    <span class="upload-icon">＋</span>
+                    <span id="upload-label-text">Upload PDF</span>
+                </label>
+                <input type="file" id="file-input" accept="application/pdf" hidden />
+                <div id="upload-status" class="upload-status"></div>
+            </div>
+
+            <div class="sidebar-section grow">
+                <ul id="doc-list" class="doc-list">
+                    <li class="empty">Koi document upload nahi hua.</li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="chat">
+            <div id="chat-log" class="chat-log">
+                <div class="welcome">
+                    <h2>Kya jaanna chahte ho?</h2>
+                    <p>
+                        Apni PDF upload karo aur uske bare me sawaal poocho.
+                        Main sirf aap ke documents ke andar mojood maloomat
+                        ke aadhar par jawab dunga.
+                    </p>
+                    <p class="welcome-hint">
+                        💡 Follow-up sawaal pooch sakte ho — jaise
+                        "Who is Carl?" ke baad "What about Susan?"
+                    </p>
+                </div>
+            </div>
+
+            <form id="ask-form" class="ask-form" autocomplete="off">
+                <input
+                    type="text"
+                    id="question-input"
+                    class="ask-input"
+                    placeholder="Apna sawaal likho… (jaise: Who is Carl?)"
+                    maxlength="2000"
+                    autofocus
+                />
+                <button type="submit" id="ask-btn" class="ask-btn">Ask</button>
+            </form>
+        </main>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>

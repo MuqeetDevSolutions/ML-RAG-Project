@@ -1,38 +1,25 @@
-# RAG Document QA
+# 📚 RAG Document QA
 
-Ek document question-answering system jo PDF upload karne deta hai aur uske
-content par sawaalon ke jawab deta hai — sirf document ke andar mojood
-maloomat ke aadhar par (hallucination ke bagair).
+A production-grade **Retrieval-Augmented Generation (RAG)** system that lets you upload PDF documents and ask questions about them — with **strict, source-grounded answers** and **zero hallucination**.
 
-## Tech Stack
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.115-green)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
-- **Backend:** FastAPI
-- **PDF extraction:** PyMuPDF
-- **RAG pipeline:** LangChain
-- **Embeddings:** sentence-transformers (all-MiniLM-L6-v2, local + free)
-- **Vector DB:** FAISS
-- **LLM:** OpenAI API
-- **Metadata DB:** SQLite (SQLAlchemy)
-- **Frontend:** HTML + CSS + vanilla JavaScript
+---
 
-## Setup
+## ✨ Features
 
-1. Python 3.10+ install karo.
-2. Repo clone karo.
-3. Virtual environment banao: `python -m venv venv`
-4. Activate karo: `venv\Scripts\activate` (Windows)
-5. Dependencies install karo: `pip install -r requirements.txt`
-6. `.env.example` ko copy karke `.env` banao aur apni API key daalo.
-7. Server chalao: `uvicorn main:app --reload`
-8. Browser me kholo: http://127.0.0.1:8000
+- 📄 **PDF Upload & Processing** — extract, clean, and chunk text page-by-page
+- 🔍 **Two-Stage Retrieval** — FAISS (bi-encoder) + Cross-encoder reranking
+- 💬 **Conversational Memory** — follow-up questions work ("Who is Carl?" → "What about Susan?")
+- 🎯 **Query Rewriting** — LLM converts vague follow-ups into standalone questions
+- ✅ **Source Citations** — every answer shows exact file + page used
+- 🛡️ **Zero Hallucination** — strict prompts + score thresholds
+- 🔒 **Security** — prompt injection defense, file validation, rate limiting
+- 📊 **Evaluation Framework** — metrics (hit rate, MRR, faithfulness)
+- 🚀 **Production Ready** — logging, error handling, status monitoring
 
-## Project Structure
+---
 
-- `app/` — backend code
-- `data/` — uploaded PDFs + FAISS index (git se ignore)
-- `frontend/` — HTML/CSS/JS
-- `tests/` — test scripts
-
-## Status
-
-Under development — built step by step.
+## 🏗️ Architecture
